@@ -48,3 +48,4 @@ Sites kimliği ve statik çıktı dizini `.openai/hosting.json` içinde tutulur.
 Statik çıktı `build/` dizinidir. Kaynaklar özel Sites deposuyla eşleştirilir.
 # pskbeddy
 # pskbeddy
+# pskbeddy
