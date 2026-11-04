@@ -47,3 +47,4 @@ Mevcut ana sistem ve sayfa uyarlamalarını değişikliklerden önce okuyun.
 Sites kimliği ve statik çıktı dizini `.openai/hosting.json` içinde tutulur.
 Statik çıktı `build/` dizinidir. Kaynaklar özel Sites deposuyla eşleştirilir.
 # pskbeddy
+# pskbeddy
