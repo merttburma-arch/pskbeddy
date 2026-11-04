@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Psikolog Bedrika Kurt
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React 19, Create React App (`react-scripts` 5) ve CSS ile hazırlanmış Türkçe
+kişisel psikolog sitesi. Mevcut `psk` projesi üzerinde geliştirilmiştir.
 
-## Available Scripts
+## Çalıştırma
 
-In the project directory, you can run:
+```sh
+npm start
+npm run build
+CI=true npm test -- --watchAll=false --runInBand
+```
 
-### `npm start`
+## İçerik ve tasarım
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Biyografi, eğitim, çalışma alanları, görüşme süreci, SSS ve iletişim bölümleri.
+- Çalışma alanlarında klavye destekli yaş grubu sekmeleri ve mobil menü.
+- Gerçek mesleki profile ve harita adresine bağlantılar; başvuru formu veya
+  uydurma randevu takvimi yoktur.
+- Kaynaklar ve belirsizlikler: [mesleki araştırma](docs/mesleki-arastirma.md).
+- Tasarım: [ana sistem](design-system/bedrika-kurt/MASTER.md) ve uygulanan
+  [ana sayfa uyarlamaları](design-system/bedrika-kurt/pages/anasayfa.md).
+- Yazı tipleri yereldir; Lora ve Raleway açık lisansları `public/assets` altındadır.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## UI UX Pro Max
 
-### `npm test`
+[UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill), yerel
+Codex skills klasörüne kurulmuştur. [AGENTS.md](AGENTS.md), bu projedeki UI/UX
+çalışmalarında skill'in kullanılmasını belirtir. React bağımlılığı değildir.
+Python 3 arama betikleri yalnızca standart kütüphaneyi kullanır.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Varsayılan kurulumda örnek arama:
 
-### `npm run build`
+```sh
+python3 "$HOME/.codex/skills/ui-ux-pro-max/scripts/search.py" \
+  "semantic components accessibility" --stack react
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`CODEX_HOME` tanımlıysa betik yolu olarak
+`$CODEX_HOME/skills/ui-ux-pro-max/scripts/search.py` kullanılır.
+Yeni bir görsel yön için `--design-system` ile önerileri oluşturun, uygunluğunu
+inceleyin ve `--persist --output-dir` ile mutlak proje köküne kaydedin.
+Mevcut ana sistem ve sayfa uyarlamalarını değişikliklerden önce okuyun.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Yayın
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Sites kimliği ve statik çıktı dizini `.openai/hosting.json` içinde tutulur.
+Statik çıktı `build/` dizinidir. Kaynaklar özel Sites deposuyla eşleştirilir.
+# pskbeddy
