@@ -44,8 +44,21 @@ Mevcut ana sistem ve sayfa uyarlamalarını değişikliklerden önce okuyun.
 
 ## Yayın
 
-Sites kimliği ve statik çıktı dizini `.openai/hosting.json` içinde tutulur.
-Statik çıktı `build/` dizinidir. Kaynaklar özel Sites deposuyla eşleştirilir.
-# pskbeddy
-# pskbeddy
-# pskbeddy
+Canlı adres: https://merttburma-arch.github.io/pskbeddy/
+
+GitHub deposunda **Settings → Pages → Build and deployment → Source** ayarını
+**GitHub Actions** olarak seçin. Satın alınmış ve yapılandırılmış bir alan adı
+kullanılmıyorsa **Custom domain** alanını boş bırakın.
+
+`.github/workflows/deploy-pages.yml`, `main` dalına her push sonrasında
+`npm ci` ve `npm run build` komutlarını çalıştırır; yalnızca `build/`
+dizinindeki derlenmiş siteyi yayımlar. README veya proje kökünü doğrudan
+yayımlayan **Deploy from a branch** ayarı bu React projesi için kullanılmaz.
+
+`package.json` içindeki `homepage: "."`, dosya yollarını göreli tutar;
+fotoğraflar, yazı tipleri, CSS ve JavaScript `/pskbeddy/` altında da yüklenir.
+Yayın durumunu deponun **Actions** sekmesinden izleyebilirsiniz. İlk kurulumu
+push işleminden sonra yaptıysanız **Deploy website to GitHub Pages → Run workflow**
+ile yayını yeniden başlatabilirsiniz.
+
+Önceki Sites yayınının kimliği `.openai/hosting.json` içinde korunur.
